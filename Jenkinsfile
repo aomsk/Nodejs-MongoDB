@@ -14,11 +14,7 @@ pipeline {
         stage('Deploy to Heruku') {
             steps {
                 bat 'git add .'
-            }
-            steps {
                 bat 'git commit -am "update all files"'
-            }
-            steps {
                 bat 'git push heroku main'
             }
         }
