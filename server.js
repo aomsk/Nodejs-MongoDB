@@ -18,9 +18,13 @@ const options = {
     useUnifiedTopology: true,
 }
 
-mongoose.connect('mongodb://localhost:27017/vuesurdapp', options);
+mongoose.connect('mongodb+srv://root:12345@cluster0.n01um.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', options);
 
 const port = process.env.PORT || 3000;
+if (port == null || port == "") {
+    port = 3000
+}
+
 const app = express();
 
 app.use(cors());
